@@ -20,8 +20,6 @@ const dbName = 'places';
 const mongoURL = `mongodb://${username}:${password}@localhost:27017/${dbName}`;
 
 mongoose.connect(mongoURL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
 })
     .then(() => {
         app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
